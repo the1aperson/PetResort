@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9981f71f19ba4013a2b976bfda5a0aac" Name="Diagram1">
+        <EntityTypeShape EntityType="PetResortModel.Pet" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PetResortModel.Reservation" Width="1.5" PointX="7.875" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PetResortModel.ResortLocation" Width="1.5" PointX="5.375" PointY="3" IsExpanded="true" />
+        <AssociationConnector Association="PetResortModel.FK_Reservations_Pets" ManuallyRouted="false" />
+        <AssociationConnector Association="PetResortModel.FK_Reservations_ResortLocations" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="PetResortModel.C__MigrationHistory" Width="1.5" PointX="2.5" PointY="4.125" />
+        <EntityTypeShape EntityType="PetResortModel.AspNetRole" Width="1.5" PointX="2.5" PointY="7.875" />
+        <EntityTypeShape EntityType="PetResortModel.AspNetUserClaim" Width="1.5" PointX="7" PointY="9" />
+        <EntityTypeShape EntityType="PetResortModel.AspNetUserLogin" Width="1.5" PointX="7" PointY="6.375" />
+        <EntityTypeShape EntityType="PetResortModel.AspNetUser" Width="1.5" PointX="4.75" PointY="6.75" />
+        <EntityTypeShape EntityType="PetResortModel.sysdiagram" Width="1.5" PointX="9.5" PointY="4.125" />
+        <AssociationConnector Association="PetResortModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="PetResortModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="PetResortModel.AspNetUserRoles" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

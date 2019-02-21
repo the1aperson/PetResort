@@ -1,0 +1,9 @@
+C:\Users\Student\Desktop\PetResort\src\PetResort\PetResort.Domain\bin\Debug\PetResort.Domain.dll
+C:\Users\Student\Desktop\PetResort\src\PetResort\PetResort.Domain\bin\Debug\PetResort.Domain.pdb
+C:\Users\Student\Desktop\PetResort\src\PetResort\PetResort.Domain\bin\Debug\log4net.dll
+C:\Users\Student\Desktop\PetResort\src\PetResort\PetResort.Domain\bin\Debug\PetResort.DATA.dll
+C:\Users\Student\Desktop\PetResort\src\PetResort\PetResort.Domain\bin\Debug\PetResort.DATA.pdb
+C:\Users\Student\Desktop\PetResort\src\PetResort\PetResort.Domain\bin\Debug\log4net.xml
+C:\Users\Student\Desktop\PetResort\src\PetResort\PetResort.Domain\obj\Debug\PetResort.Domain.csprojResolveAssemblyReference.cache
+C:\Users\Student\Desktop\PetResort\src\PetResort\PetResort.Domain\obj\Debug\PetResort.Domain.dll
+C:\Users\Student\Desktop\PetResort\src\PetResort\PetResort.Domain\obj\Debug\PetResort.Domain.pdb
