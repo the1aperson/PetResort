@@ -1,0 +1,41 @@
+﻿@model PetResort.DATA.Reservation
+
+@{
+    ViewBag.Title = "Reservation Details";
+}
+
+
+<div>
+    <h4 id="title">Your Reservation Details</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ReservationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReservationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pet.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pet.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ResortLocation.ResortName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResortLocation.ResortName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ReservationID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
