@@ -1,0 +1,50 @@
+﻿@model PetResort.UI.Models.ContactViewModel
+@{
+    ViewBag.Title = "Contact";
+}
+<h2 id="title" style="text-align:center; font-size:3em;">Contact Us!</h2>
+
+<div id="contact-page" >
+    <div class="bg">
+            
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <form method="post">
+        <div class="one_third first">
+            <label for="name">Name <span>*</span></label>
+            @Html.TextBoxFor(x => x.Name, new { @class = "form-control", id="name"})
+        </div>
+
+        <div class="one_third">
+            <label for="email">Email <span>*</span></label>
+            @Html.TextBoxFor(x => x.Email, new { @class = "form-control", id="email", title = "We will keep your email confidential and won't send unnecessary spam" })
+        </div>
+        <div class="one_third">
+            <label for="subject">Subject <span>*</span></label>
+            @Html.TextBoxFor(x => x.Subject, new { @class = "form-control", id="url" })
+        </div>
+
+        <div class="block clear">
+            <label for="message">Message <span>*</span></label>
+            @Html.TextAreaFor(x => x.Message, new { @class = "form-control", id = "comment", rows = "6", cols="25", name = "comment", title = "Please be concise but make sure to include all important details." })
+        </div>
+        <div>
+            <input type="submit" name="submit" class="btn btn-primary pull-right" value="submit" />
+        </div>
+    </form>
+}
+        @*<p>
+                @if (Model != null)
+                {
+                    @Model.Name<br />
+                    @Model.Email<br />
+                    @Model.Subject<br />
+                    @Model.Message
+                }
+            </p>*@
+    </div>
+        </div>
+    @section scripts{
+        <script src="~/Scripts/formValidation.js"></script>
+    }

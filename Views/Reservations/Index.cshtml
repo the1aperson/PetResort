@@ -1,0 +1,67 @@
+﻿@model IEnumerable<PetResort.DATA.Reservation>
+
+@{
+    ViewBag.Title = "Reservations";
+}
+
+<h2 id="title" style="text-align:center; font-size:2em;">Your Reservations</h2>
+@if (Model.Count() < 1)
+{
+    <h2 style="text-align:center">You have No Reservations. Please Make Your Reservation @Html.ActionLink("HERE", "Create", "Reservations")</h2>
+}
+
+else
+{
+
+
+    <p>
+        @Html.ActionLink("Make a Reservation!", "Create")
+    </p>
+    <div class="content">
+        <div class="scrollable">
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            @*@Html.DisplayNameFor(model => model.ReservationDate)*@
+                            Reservation Date
+                        </th>
+                        <th>
+                            @*@Html.DisplayNameFor(model => model.Pet.Name)*@
+                            Pet Name
+                        </th>
+                        <th>
+                            @*@Html.DisplayNameFor(model => model.ResortLocation.ResortName)*@
+                            Resort
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                @foreach (var item in Model)
+                {
+                    <tbody>
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ReservationDate)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Pet.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ResortLocation.ResortName)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Details", "Details", new { id = item.ReservationID }) 
+                                
+                                @if (User.IsInRole("Admin") || (User.IsInRole("Employee"))) { 
+                              @:| @Html.ActionLink("Edit", "Edit", new { id = item.ReservationID }) 
+                              @:| @Html.ActionLink("Delete", "Delete", new { id = item.ReservationID })
+                                }
+                            </td>
+                        </tr>
+                    </tbody>
+                }
+            </table>
+        </div>
+    </div>
+}

@@ -1,0 +1,81 @@
+﻿@model IEnumerable<PetResort.DATA.ResortLocation>
+
+@{
+    ViewBag.Title = "Our Local Resorts";
+}
+
+<h2 id="title" style="font-size:3em; text-align:center;">Find a Resort Near You!</h2>
+@if (User.IsInRole("Admin")) { 
+<p>
+    @Html.ActionLink("Create New Resort", "Create")
+</p>
+}
+
+
+<div class="content">
+    <div class="scrollable">
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        @*@Html.DisplayNameFor(model => model.ResortName)*@
+                        Resort Name
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Address)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.City)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.State)
+                    </th>
+                    <th>
+                        @*@Html.DisplayNameFor(model => model.ZipCode)*@
+                        Zip Code
+                    </th>
+                    <th>
+                        @*@Html.DisplayNameFor(model => model.ReservationLimit)*@
+                        Reservation Limit
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            @foreach (var item in Model)
+            {
+                <tbody>
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ResortName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Address)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.City)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.State)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ZipCode)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ReservationLimit)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Details", "Details", new { id = item.ResortLocationID })
+
+                            @if (User.IsInRole("Admin"))
+                            {
+                                @:| @Html.ActionLink("Edit", "Edit", new { id = item.ResortLocationID })
+                                @:|  @Html.ActionLink("Delete", "Delete", new { id = item.ResortLocationID })
+            }
+                        </td>
+                    </tr>
+                </tbody>
+            }
+
+        </table>
+    </div>
+</div>
